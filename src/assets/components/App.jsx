@@ -10,35 +10,46 @@ const App = () => {
     { id: "id-3", name: "Eden Clements", number: "645-17-79" },
     { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
   ];
+  const updatedContacts = FINISH_CONTACTS.map((contact) => ({ ...contact }));
   const [dataContact, setDataContact] = useState(FINISH_CONTACTS);
-  const handleSubmit = (e) => {
-    console.log(dataContact);
-    e.preventDefault();
+  const handleSubmit = (values, options) => {
+    console.log(values);
+    options.resetForm();
+    const { name, value } = values;
+    setDataContact({
+      ...dataContact,
+      updatedContacts,
+      ...values,
+      [name]: value,
+    });
   };
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    // setDataContact({ ...dataContact, [name]: value });
-    console.log(value);
-    console.log(e);
-    console.log(dataContact);
+
+  const initialValues = {
+    name: "Olha",
+    phone: "380",
   };
+  //   const handleChangeInput = (e) => {
+  //     const { name, value } = e.target;
+  //     // setDataContact({ ...dataContact, [name]: value });
+  //     console.log(value);
+  //     console.log(e);
+  //     console.log(dataContact);
+  //   };
   //   const newUser=(data)=>{
   //     id='',
   //     name='',
   //     number='',
   //   }
-  const changeFilter = (e) => {
-    setDataContact({ filter: e.currentTarget.value });
-  };
+  //   const changeFilter = (e) => {
+  //     setDataContact({ filter: e.currentTarget.value });
+  //   };
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm
-        handleSubmit={handleSubmit}
-        handleChangeInput={handleChangeInput}
-        data={dataContact}
+      <ContactForm handleSubmit={handleSubmit} initialValues={initialValues} />
+      <SearchBox
+      //   changeFilter={changeFilter}
       />
-      <SearchBox changeFilter={changeFilter} />
       <ContactList data={dataContact} />
     </div>
   );
