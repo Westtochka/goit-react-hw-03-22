@@ -15,18 +15,22 @@ const App = () => {
   const handleSubmit = (values, options) => {
     console.log(values);
     options.resetForm();
-    const { name, value } = values;
-    setDataContact({
-      ...dataContact,
-      updatedContacts,
-      ...values,
-      [name]: value,
-    });
+    console.log(updatedContacts);
+    // const { name, value } = values;
+    // setDataContact({
+    //   ...dataContact,
+    //   updatedContacts,
+    //   ...values,
+    //   [name]: value,
+    // });
   };
 
   const initialValues = {
-    name: "Olha",
+    name: "",
     phone: "380",
+  };
+  const handleAddContact = () => {
+    console.log("hello");
   };
   //   const handleChangeInput = (e) => {
   //     const { name, value } = e.target;
@@ -46,7 +50,11 @@ const App = () => {
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm handleSubmit={handleSubmit} initialValues={initialValues} />
+      <ContactForm
+        handleSubmit={handleSubmit}
+        handleAddContact={handleAddContact}
+        initialValues={initialValues}
+      />
       <SearchBox
       //   changeFilter={changeFilter}
       />

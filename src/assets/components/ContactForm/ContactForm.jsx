@@ -1,16 +1,32 @@
 import { Formik, Form, Field } from "formik";
-const ContactForm = ({ handleSubmit, initialValues }) => {
+const ContactForm = ({ handleSubmit, initialValues, handleAddContact }) => {
   return (
     <div>
-      <Formik>
-        <Form onSubmit={handleSubmit} initialValues={initialValues}>
+      {/* <Formik
+        onSubmit={handleSubmit}
+        initialValues={initialValues}
+        handleAddContact={handleAddContact}
+      > */}
+      {/* <Formik
+        onSubmit={handleSubmit}
+        initialValues={initialValues}
+        handleAddContact={handleAddContact}
+      > */}
+      <Formik
+        onSubmit={(values, options) => {
+          handleAddContact(values);
+          handleSubmit(values, options);
+        }}
+        initialValues={initialValues}
+      >
+        <Form>
           <label>
             <span>Name:</span>
-            <Field name="name" value={initialValues.name} />
+            <Field name="name" type="text" />
           </label>
           <label>
             <span>Phone:</span>
-            <Field name="phone" value={initialValues.phone} />
+            <Field name="phone" type="text" />
           </label>
           <button type="submit">Add contact</button>
         </Form>
