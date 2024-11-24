@@ -1,7 +1,8 @@
+import s from "./Contact.module.css";
 const Contact = ({ contact }) => {
   const { id, name, number } = contact;
   return (
-    <div>
+    <div className={s.wrapper}>
       <li key={id}>
         <p>👦 {name}</p>
         <p>☎ {number}</p>

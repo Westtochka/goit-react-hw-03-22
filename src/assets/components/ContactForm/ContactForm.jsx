@@ -16,7 +16,7 @@ const ContactForm = ({ handleSubmit, initialValues, handleAddContact }) => {
           </label>
           <label>
             <span>Phone:</span>
-            <Field name="phone" type="text" />
+            <Field name="number" type="text" />
           </label>
           <button type="submit">Add contact</button>
         </Form>

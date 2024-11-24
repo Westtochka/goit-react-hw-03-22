@@ -11,7 +11,7 @@ const App = () => {
     { id: "id-3", name: "Eden Clements", number: "645-17-79" },
     { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
   ];
-  // const updatedContacts = FINISH_CONTACTS.map((contact) => ({ ...contact }));
+
   const [dataContact, setDataContact] = useState(FINISH_CONTACTS);
   const handleSubmit = (values, options) => {
     console.log(values);
@@ -20,10 +20,11 @@ const App = () => {
 
   const initialValues = {
     name: "",
-    phone: "380",
+    number: "",
   };
   const handleAddContact = (newContact) => {
     console.log("hello", newContact);
+
     setDataContact((prev) => [...prev, { ...newContact, id: nanoid() }]);
     console.log(dataContact);
   };
