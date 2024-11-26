@@ -1,16 +1,17 @@
-import { Formik, Form, Field } from "formik";
-
-const SearchBox = ({ changeFilter }) => {
+import s from "./SearchBox.module.css";
+const SearchBox = ({ search, setSearch }) => {
   return (
-    <div>
-      <Formik>
-        <Form>
-          <label>
-            <span>Find contacts by name</span>
-            <Field name="" type="" onChange={changeFilter} />
-          </label>
-        </Form>
-      </Formik>
+    <div className={s.searchbox}>
+      <label>
+        <span>Find contacts by name</span>
+        <input
+          value={search}
+          type="text"
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+        />
+      </label>
     </div>
   );
 };

@@ -1,0 +1,8 @@
+.searchbox {
+  /* background-color: blueviolet; */
+  padding-top: 30px;
+  /* padding-left: 100px; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

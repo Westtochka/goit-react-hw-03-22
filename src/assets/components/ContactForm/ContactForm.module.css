@@ -1,0 +1,23 @@
+.wrapper {
+  background-color: rgb(209, 222, 162);
+  border: 5px solid darkblue;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 30px;
+}
+.label {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.button {
+  padding: 10px 10px;
+}
+.error {
+  color: red;
+}
+.input {
+  width: 100%;
+}
