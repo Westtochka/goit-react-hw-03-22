@@ -26,13 +26,23 @@ const ContactForm = ({ handleSubmit, initialValues, handleAddContact }) => {
         <Form className={s.wrapper}>
           <label className={s.label}>
             <span>Name: </span>
-            <Field name="name" type="text" className={s.input} />
+            <Field
+              name="name"
+              type="text"
+              className={s.input}
+              placeholder="enter your name"
+            />
 
             <ErrorMessage name="name" component="span" className={s.error} />
           </label>
           <label className={s.label}>
             <span>Phone: </span>
-            <Field name="number" type="text" className={s.input} />
+            <Field
+              name="number"
+              type="text"
+              className={s.input}
+              placeholder="enter your phone"
+            />
 
             <ErrorMessage name="number" component="span" className={s.error} />
           </label>

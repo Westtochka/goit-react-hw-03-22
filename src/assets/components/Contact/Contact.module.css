@@ -2,9 +2,13 @@
   background-color: rgb(209, 239, 74);
   /* opacity: 50%; */
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   width: (100%-10px)/5;
   padding: 10px 10px;
   border-radius: 8px;
+  list-style-type: none;
+}
+.li {
+  width: (100%-10px)/4;
 }

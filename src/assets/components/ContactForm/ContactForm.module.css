@@ -1,6 +1,6 @@
 .wrapper {
   background-color: rgb(209, 222, 162);
-  border: 5px solid darkblue;
+  border: 1px solid darkblue;
   width: 200px;
   display: flex;
   align-items: center;
@@ -14,6 +14,9 @@
 }
 .button {
   padding: 10px 10px;
+  border-radius: 3px;
+  background-color: rgb(209, 239, 74);
+  border: none;
 }
 .error {
   color: red;

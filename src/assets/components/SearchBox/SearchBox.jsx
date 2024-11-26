@@ -3,7 +3,7 @@ const SearchBox = ({ search, setSearch }) => {
   return (
     <div className={s.searchbox}>
       <label>
-        <span>Find contacts by name</span>
+        <span className={s.text}>Find contacts by name </span>
         <input
           value={search}
           type="text"

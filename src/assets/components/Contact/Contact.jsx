@@ -3,7 +3,7 @@ const Contact = ({ contact, handleDeleteContact }) => {
   const { id, name, number } = contact;
   return (
     <div className={s.wrapper}>
-      <li key={id}>
+      <li className={s.li} key={id}>
         <p>👦 {name}</p>
         <p>☎ {number}</p>
         <button
