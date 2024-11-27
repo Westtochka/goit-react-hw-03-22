@@ -25,7 +25,6 @@ const App = () => {
   });
   const handleSubmit = (values, options) => {
     console.log(values);
-
     options.resetForm();
   };
   const [search, setSearch] = useState("");
